@@ -1,12 +1,14 @@
 <template>
-  <div class="container grid grid-cols-2">
-    <div class="grid grid-rows-3">
-      <Stats />
-      <ExerciseLevel />
-      <Goal />
-    </div>
-    <div>
-      <Results />
+  <div class="flex justify-center w-screen">
+    <div class="grid grid-cols-2 mt-8 w-2/3">
+      <div class="grid grid-rows-3 gap-4">
+        <Stats />
+        <ExerciseLevel />
+        <Goal />
+      </div>
+      <div>
+        <Results />
+      </div>
     </div>
   </div>
 </template>
