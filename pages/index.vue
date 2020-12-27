@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <div class="grid grid-cols-3 gap-4 mt-8 h-1/2">
+    <div class="grid grid-cols-3 gap-4 mt-8 h-1/2 w-3/4">
       <div class="grid grid-rows-3 col-span-2 gap-4">
         <Stats />
         <ExerciseLevel />
