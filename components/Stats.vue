@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-gray-700 rounded-lg flex w-full p-6 shadow-lg">
+  <div class="bg-gray-700 rounded-lg flex flex-col w-full p-6 shadow-lg">
+    <h1 class="block text-3xl text-teal-200 font-bold mb-2">
+      Personal Stats
+    </h1>
     <div class="flex items-center w-full">
       <div class="flex justify-between w-full gap-4">
         <!-- Gender Select -->
