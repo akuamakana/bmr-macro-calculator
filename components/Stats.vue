@@ -8,34 +8,48 @@
             Gender
           </p>
           <div class="flex mx-1">
-            <input class="mr-1" type="radio" name="gender" value="male">
+            <input
+              v-model="stats.gender"
+              class="mr-3"
+              type="radio"
+              name="gender"
+              value="male"
+              @change="calcBMR"
+            >
             <label for="male">Male</label>
           </div>
           <div class="flex mx-1">
-            <input class="mr-1" type="radio" name="gender" value="female">
+            <input
+              v-model="stats.gender"
+              class="mr-3"
+              type="radio"
+              name="gender"
+              value="female"
+              @change="calcBMR"
+            >
             <label for="female">Female</label>
           </div>
-        </div>
-        <!-- Height -->
-        <div>
-          <p class="text-center text-2xl mb-2 text-teal-200">
-            Height
-          </p>
-          <input class="border bg-transparent rounded-lg p-2 w-32 " type="number" placeholder="69">
         </div>
         <!-- Age -->
         <div>
           <p class="text-center text-2xl mb-2 text-teal-200">
             Age
           </p>
-          <input class="border bg-transparent rounded-lg p-2 w-32 " type="number" placeholder="69">
+          <input v-model="stats.age" class="border bg-transparent rounded-lg p-2 w-32 " type="number" placeholder="69" @change="calcBMR">
+        </div>
+        <!-- Height -->
+        <div>
+          <p class="text-center text-2xl mb-2 text-teal-200">
+            Height
+          </p>
+          <input v-model="stats.height" class="border bg-transparent rounded-lg p-2 w-32 " type="number" placeholder="69" @change="calcBMR">
         </div>
         <!-- Weight -->
         <div>
           <p class="text-center text-2xl mb-2 text-teal-200">
             Weight
           </p>
-          <input class="border bg-transparent rounded-lg p-2 w-32 " type="number" placeholder="69">
+          <input v-model="stats.weight" class="border bg-transparent rounded-lg p-2 w-32 " type="number" placeholder="69" @change="calcBMR">
         </div>
       </div>
     </div>
@@ -44,5 +58,17 @@
 
 <script>
 export default {
+  props: ['stats'],
+  methods: {
+    calcBMR () {
+      this.$emit('calcBMR')
+    }
+  }
 }
 </script>
+
+<style>
+  input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+</style>
