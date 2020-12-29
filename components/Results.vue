@@ -16,6 +16,9 @@
         {{ bmr.goal }} kcal/day
       </h1>
     </div>
+    <button class="border-2 border-gray-200 border-opacity-50 rounded-lg py-6 focus:outline-none" @click="$emit('updateBMR')">
+      Submit
+    </button>
   </div>
 </template>
 

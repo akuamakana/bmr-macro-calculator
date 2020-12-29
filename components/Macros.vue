@@ -74,7 +74,7 @@ export default {
     updateMacros () {
       const carbs = this.bmr * (this.percentage.carbs / 100) / 4
       const protein = this.bmr * (this.percentage.protein / 100) / 4
-      const fats = this.bmr * (this.percentage.fats / 100) / 9
+      const fats = this.bmr * (this.percentage.fats / 100) / 4
       this.macros.carbs = parseInt(carbs)
       this.macros.protein = parseInt(protein)
       this.macros.fats = parseInt(fats)

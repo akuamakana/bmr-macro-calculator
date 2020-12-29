@@ -64,7 +64,7 @@
           <div v-if="stats.isMetric" class="grid">
             <span class="border bg-transparent rounded-lg p-2 flex items-center">
               <input
-                v-model="stats.heightInCm"
+                v-model="stats.metric.height"
                 min="1"
                 class="bg-transparent"
                 type="number"
@@ -101,7 +101,7 @@
           </p>
           <span class="border bg-transparent rounded-lg p-2">
             <input
-              v-model="stats.weight"
+              v-model.number="stats.imperial.weight"
               min="1"
               class="bg-transparent p-2"
               type="number"
@@ -122,20 +122,20 @@ export default {
   data () {
     return {
       feet: 0,
-      inches: 0
+      inches: 0,
+      weight: 0
     }
   },
   methods: {
     calcBMR () {
       if (!this.stats.isMetric) {
         this.feetToInches()
-        console.log(this.stats.heightInIn)
       }
       this.$emit('calcBMR')
     },
     feetToInches () {
       const totalInches = (this.feet * 12) + parseInt(this.inches)
-      this.stats.heightInIn = totalInches
+      this.stats.imperial.height = totalInches
     }
   }
 }

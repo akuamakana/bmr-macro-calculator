@@ -13,7 +13,7 @@
           class="mr-3"
           @change="updateGoal"
         >
-        <label for="goal">Lose</label>
+        <label class="text-xl" for="goal">Lose</label>
       </div>
       <div class="flex justify-between items-center">
         <input
@@ -24,7 +24,7 @@
           class="mr-3"
           @change="updateGoal"
         >
-        <label for="goal">Maintain</label>
+        <label class="text-xl" for="goal">Maintain</label>
       </div>
       <div class="flex justify-between items-center">
         <input
@@ -35,7 +35,7 @@
           class="mr-3"
           @change="updateGoal"
         >
-        <label for="goal">Gain</label>
+        <label class="text-xl" for="goal">Gain</label>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     updateGoal () {
-      this.$emit('updateGoal', this.goal)
+      this.$emit('updateGoal', parseFloat(this.goal))
     }
   }
 }

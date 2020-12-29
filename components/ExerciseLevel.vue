@@ -13,7 +13,7 @@
           class="mr-3"
           @change="calcBMR"
         >
-        <label for="0">Little/None</label>
+        <label class="text-xl" for="0">Little/None</label>
       </div>
       <div class="flex justify-between items-center">
         <input
@@ -24,7 +24,7 @@
           class="mr-3"
           @change="calcBMR"
         >
-        <label for="0">Light</label>
+        <label class="text-xl" for="0">Light</label>
       </div>
       <div class="flex justify-between items-center">
         <input
@@ -35,7 +35,7 @@
           class="mr-3"
           @change="calcBMR"
         >
-        <label for="0">Moderate</label>
+        <label class="text-xl" for="0">Moderate</label>
       </div>
       <div class="flex justify-between items-center">
         <input
@@ -46,7 +46,7 @@
           class="mr-3"
           @change="calcBMR"
         >
-        <label for="0">Very Active</label>
+        <label class="text-xl" for="0">Very Active</label>
       </div>
       <div class="flex justify-between items-center">
         <input
@@ -57,7 +57,7 @@
           class="mr-3"
           @change="calcBMR"
         >
-        <label for="0">Extra Active</label>
+        <label class="text-xl" for="0">Extra Active</label>
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     calcBMR () {
-      this.$emit('levelChange', this.level)
+      this.$emit('levelChange', parseFloat(this.level))
     }
   }
 }
